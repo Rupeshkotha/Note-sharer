@@ -46,10 +46,9 @@ To run this project locally, follow these steps:
     ```bash
     python app.py
     ```
-    The application will be available at `http://127.0.0.1:5000`.
+    
 
 ---
 
 ## Screenshots
 
-*(To add your screenshots, create a `screenshots` folder in your project, save your images there, and uncomment the lines below.)*
