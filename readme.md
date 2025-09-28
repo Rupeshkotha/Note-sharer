@@ -49,6 +49,8 @@ To run this project locally, follow these steps:
     
 
 ---
+## Webiste is live here
+ https://my-note-sharer.onrender.com
 
 ## Screenshots
 
