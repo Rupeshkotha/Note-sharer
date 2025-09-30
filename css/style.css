@@ -1,6 +1,0 @@
-pre {
-  /* This tells the browser to wrap long lines of text */
-  white-space: pre-wrap;      
-  /* This helps break very long words if needed */
-  word-wrap: break-word;      
-}
