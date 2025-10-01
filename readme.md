@@ -1,27 +1,32 @@
-# Note Sharer - A Temporary Text Sharing App
+# Note Sharer - A Full-Stack Web Application
 
-A simple web application built with Flask and Bootstrap that allows users to create and share text-based notes via a unique, private link. This project was built to demonstrate a full-stack application structure, including a Python backend, a responsive frontend, and client-side validation.
-
----
-
-## Features
-
-* **Create Notes**: Users can paste any amount of text into a form to create a new note.
-* **Unique Links**: Each note is saved with a unique, randomly generated 6-character ID, making the links private and shareable.
-* **Preserved Formatting**: The application preserves all original formatting of the text, including line breaks and spacing.
-* **Client-Side Validation**: The form will not submit if the text area is empty, thanks to validation with jQuery.
+A full-stack web application built with Flask and MongoDB. This application allows users to register, log in, and create private, text-based notes. Each note can also be shared publicly via a unique, randomly generated link. This project demonstrates a complete user authentication system, persistent cloud database integration, and a responsive frontend.
 
 ---
+## 🚀 Live Demo
 
-## Technologies Used
+You can view the live, deployed application here:
+**[https://my-note-sharer.onrender.com](https://my-note-sharer.onrender.com)**
 
-* **Backend**: Python, Flask
+---
+## ✨ Features
+
+* **User Registration & Login**: Secure user authentication system with password hashing.
+* **Persistent Storage with MongoDB**: User and note data is stored permanently in a MongoDB Atlas cloud database.
+* **User-Specific Notes**: A private "My Notes" section where logged-in users can view and manage their own notes.
+* **Public Note Sharing**: Each created note has a unique URL that can be shared publicly for viewing.
+* **Responsive Frontend**: The user interface is built with Bootstrap 5 to be functional on both desktop and mobile devices.
+
+---
+## 🛠️ Technologies Used
+
+* **Backend**: Python, Flask, Flask-Login, Werkzeug (for password hashing), Gunicorn
 * **Frontend**: HTML, Bootstrap 5, jQuery
-* **Version Control**: Git, GitHub
+* **Database**: MongoDB Atlas, PyMongo
+* **Deployment**: Render, Git & GitHub
 
 ---
-
-## Setup and Installation
+## ⚙️ Local Setup and Installation
 
 To run this project locally, follow these steps:
 
@@ -31,7 +36,7 @@ To run this project locally, follow these steps:
     cd note-sharer
     ```
 
-2.  **Create a virtual environment (recommended):**
+2.  **Create and activate a virtual environment:**
     ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
@@ -42,15 +47,18 @@ To run this project locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-4.  **Run the application:**
+4.  **Create a `.env` file:**
+    Create a file named `.env` in the root of the project folder and add your environment variables.
+    ```
+    MONGO_URI="your_mongodb_connection_string"
+    ```
+
+5.  **Run the application:**
     ```bash
     python app.py
     ```
-    
+    The application will be available at `http://127.0.0.1:5000`.
 
 ---
-## Webiste is live here
- https://my-note-sharer.onrender.com
-
-## Screenshots
+## 📸 Screenshots
 
