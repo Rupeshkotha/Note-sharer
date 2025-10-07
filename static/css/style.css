@@ -1,4 +1,91 @@
+/* --- Global Styles & Dark Theme --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    background-image: linear-gradient(135deg, #121212 25%, #1a1a1a 100%);
+    color: #e0e0e0;
+}
+
+/* --- Navbar --- */
+.navbar-dark {
+    background-color: #1e1e1e !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Cards --- */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+}
+
+/* --- Forms & Inputs --- */
+.form-control,
+textarea.form-control {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+textarea.form-control:focus {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #00bcd4; /* Teal accent color */
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 212, 0.25);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+    background-color: #03a9f4;
+}
+
+/* --- Links --- */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #80deea;
+}
+
+/* --- Preformatted Text (for notes) --- */
 pre {
-  white-space: pre-wrap;      
-  word-wrap: break-word;      
+    white-space: pre-wrap;      
+    word-wrap: break-word;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* --- Alert Messages --- */
+.alert-success {
+    background-color: #1e464a;
+    color: #e0f7fa;
+    border: 1px solid #26a69a;
+}
+
+.alert-info {
+    background-color: #193a5a;
+    color: #e1f5fe;
+    border: 1px solid #039be5;
 }
