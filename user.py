@@ -13,6 +13,4 @@ class User(UserMixin):
         if user_data:
             return User(user_data)
         return None
-
-# We need ObjectId to query by _id in MongoDB
 from bson.objectid import ObjectId

@@ -21,10 +21,10 @@ db = client.get_database("note_sharer_db")
 notes_collection = db.get_collection("notes")
 users_collection = db.get_collection("users")
 
-# --- Flask-Login Setup ---
+
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'login' # Redirect to login page if user is not authenticated
+login_manager.login_view = 'login' 
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -33,11 +33,10 @@ def load_user(user_id):
         return User(user_data)
     return None
 
-# --- Helper Functions ---
+
 def generate_note_id(length=6):
     return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
 
-# --- Public Routes ---
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -50,7 +49,7 @@ def view_note(note_id):
     else:
         return "Note not found.", 404
 
-# --- Authentication Routes ---
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -93,7 +92,6 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-# --- Protected Routes (User must be logged in) ---
 @app.route('/create', methods=['POST'])
 @login_required
 def create_note():

@@ -3,13 +3,13 @@
 A full-stack web application built with Flask and MongoDB. This application allows users to register, log in, and create private, text-based notes. Each note can also be shared publicly via a unique, randomly generated link. This project demonstrates a complete user authentication system, persistent cloud database integration, and a responsive frontend.
 
 ---
-## 🚀 Live Demo
+## Live Demo
 
 You can view the live, deployed application here:
 **[https://my-note-sharer.onrender.com](https://my-note-sharer.onrender.com)**
 
 ---
-## ✨ Features
+## Features
 
 * **User Registration & Login**: Secure user authentication system with password hashing.
 * **Persistent Storage with MongoDB**: User and note data is stored permanently in a MongoDB Atlas cloud database.
@@ -18,7 +18,7 @@ You can view the live, deployed application here:
 * **Responsive Frontend**: The user interface is built with Bootstrap 5 to be functional on both desktop and mobile devices.
 
 ---
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Backend**: Python, Flask, Flask-Login, Werkzeug (for password hashing), Gunicorn
 * **Frontend**: HTML, Bootstrap 5, jQuery
@@ -26,7 +26,7 @@ You can view the live, deployed application here:
 * **Deployment**: Render, Git & GitHub
 
 ---
-## ⚙️ Local Setup and Installation
+##  Local Setup and Installation
 
 To run this project locally, follow these steps:
 
@@ -60,5 +60,5 @@ To run this project locally, follow these steps:
     The application will be available at `http://127.0.0.1:5000`.
 
 ---
-## 📸 Screenshots
+
 
