@@ -18,7 +18,7 @@ You can view the live, deployed application here:
 * **Responsive Frontend**: The user interface is built with Bootstrap 5 to be functional on both desktop and mobile devices.
 
 ---
-## Technologies Used
+## 🛠️ Technologies Used
 
 * **Backend**: Python, Flask, Flask-Login, Werkzeug (for password hashing), Gunicorn
 * **Frontend**: HTML, Bootstrap 5, jQuery
@@ -60,5 +60,5 @@ To run this project locally, follow these steps:
     The application will be available at `http://127.0.0.1:5000`.
 
 ---
-
+## 📸 Screenshots
 
