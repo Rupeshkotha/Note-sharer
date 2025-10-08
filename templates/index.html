@@ -3,23 +3,38 @@
 {% block content %}
 <div class="row">
     <div class="col-md-8 offset-md-2">
-        <div class="card">
-            <div class="card-header">
-                <h2>Create a New Note</h2>
+
+        {% if current_user.is_authenticated %}
+            <div class="card">
+                <div class="card-header">
+                    <h2>Create a New Note</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/create" method="POST">
+                        <div class="mb-3">
+                            <textarea class="form-control" name="note_content" rows="15" placeholder="Paste your text here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Create Note</button>
+                    </form>
+                </div>
             </div>
-            <div class="card-body">
-                {% if current_user.is_authenticated %}
-                <form action="/create" method="POST">
-                    <div class="mb-3">
-                        <textarea class="form-control" name="note_content" rows="15" placeholder="Paste your text here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Create Note</button>
-                </form>
-                {% else %}
-                <p>Please <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">register</a> to create a new note.</p>
-                {% endif %}
+        {% else %}
+            <div class="welcome-section text-center">
+                <h1 class="display-4">Welcome to Note Sharer </h1>
+                <p class="lead mt-3">
+                    The simplest way to create, manage, and share your notes.
+                </p>
+                <hr class="my-4">
+                <p>
+                    Join now to create your private collection of notes, or log in to access your existing ones.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-4 gap-3">Sign Up</a>
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg px-4">Login</a>
+                </div>
             </div>
-        </div>
+        {% endif %}
+
     </div>
 </div>
 {% endblock %}
